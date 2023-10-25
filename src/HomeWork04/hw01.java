@@ -6,7 +6,7 @@
 public class hw01 {
 	public static void main(String[] args) {
 		int[] haveAArr = {29, 100, 39, 41, 50, 8, 66, 77, 95, 15};
-		 AllAVGMAXMIN(haveAArr);
+		AllAVGMAXMIN(haveAArr);
 	}
 	
 	public static int[] AllAVGMAXMIN(int[] arr) {
@@ -41,6 +41,7 @@ public class hw01 {
 				break;
 			case 2:
 				System.out.println("平均數值為: " + QQ[j]);
+				System.out.println("2232");
 				break;
 		}
 //			System.out.println(QQ[j]);
