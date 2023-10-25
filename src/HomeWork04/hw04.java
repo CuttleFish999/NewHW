@@ -1,6 +1,7 @@
 package HomeWork04;
 
 import java.util.Scanner;
+
 //
 //阿文上班時忘了帶錢包,想要向同事借錢,和他交情比較好的同事共有 5 個,其員工編號與身上現金列
 //表如下:
@@ -12,30 +13,25 @@ import java.util.Scanner;
 //(提示:Scanner,二維陣列)
 public class hw04 {
 	public static void main(String[] args) {
-		int[][] peopleMonkey = { { 25, 32, 8, 19, 27 }, 
-				   { 2500, 800, 500, 1000, 1200 } 
-				 };
-		System.out.print("請輸入想借多少? ");
-		Scanner scanner = new Scanner(System.in);
-		int input = scanner.nextInt();
+		int[][] peopleMonkey = { { 25, 32, 8, 19, 27 }, { 2500, 800, 500, 1000, 1200 } };
 		
-		
-//		System.out.println(howManyPeopleHaveMoney(peopleMonkey,input) + " 人");
-		howManyPeopleHaveMoney(peopleMonkey,input);
-		
+		Scanner SC = new Scanner(System.in);
+		System.out.println("請輸入想借的金額: ");
+		int input = SC.nextInt();
+		findWhoHaveMoney(peopleMonkey , input);
 	}
-	public static int howManyPeopleHaveMoney(int[][] arr , int input) {
+	public static void findWhoHaveMoney(int[][]arr , int money ) {
 		int count = 0;
-		for(int i = 0 ; i < arr.length ; i ++) {
+		
+		for(int i = 0 ; i < arr.length ; i++) {
 			for(int j = 0 ; j < arr[i].length ; j++) {
-				if(i == 1 && input >= arr[1][j]) {
-					System.out.println(arr[0][j] + " 號");
+				if(i == 1 && money <= arr[1][j]) {
+					System.out.println("目前 " + arr[0][j] + " 同學有錢可以借，但不一定可以借你。" );
 					count++;
 				}
 			}
 		}
-		System.out.println("共 " + count + " 個人。");
-		return count;
+		System.out.println("共有 " + count + " 個人，目前有錢可以借。");
 	}
-	
+
 }
