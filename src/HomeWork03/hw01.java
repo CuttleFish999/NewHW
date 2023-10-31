@@ -17,11 +17,17 @@ public class hw01 {
 	public static int[] Triangle() {
 		
 		Scanner scanner = new Scanner(System.in);
+		
+		
 		System.out.println("請輸入三個整數(int)，以判斷是哪種三角形。");
 		System.out.println("請輸入第一個整數: ");
 		int side1 = scanner.nextInt();
+		
+		
 		System.out.println("請輸入第二個整數: ");
 		int side2 = scanner.nextInt();
+		
+		
 		System.out.println("請輸入第三個整數: ");
 		int side3 = scanner.nextInt();
 		System.out.println("輸入完成，判斷三角形中... ");
